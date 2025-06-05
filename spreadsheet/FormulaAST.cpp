@@ -158,9 +158,6 @@ public:
                 result = lhs_value * rhs_value;
                 break;
             case Divide:
-                if (!std::isfinite(rhs_value) || rhs_value == 0.0) {
-                    throw FormulaError{ FormulaError::Category::Arithmetic };
-                }
                 result = lhs_value / rhs_value;
                 break;
             default:
